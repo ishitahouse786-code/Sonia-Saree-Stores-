@@ -1,0 +1,23 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "App bulid E-commerce website development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishitahouse786-code/Sonia-Saree-Stores-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishitahouse786-code/Sonia-Saree-Stores-/issues"
+  },
+  "homepage": "https://github.com/ishitahouse786-code/Sonia-Saree-Stores-#readme",
+  "dependencies": {
+    "fuse.js": "^6.6.2"
+  }
+}
