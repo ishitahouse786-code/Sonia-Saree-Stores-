@@ -7,7 +7,7 @@ export default function ProductCard({ product, onAddToCart = () => {}, onOrderNo
   return (
     <div style={{ border: '1px solid #eee', borderRadius: 12, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       {product.image && (
-        <img src={product.image} alt={product.name} style={{ width: '100%', height: 220, objectFit: 'cover' }} />
+        <img src={product.image} alt={product.name} loading="lazy" style={{ width: '100%', height: 220, objectFit: 'cover' }} />
       )}
       <div style={{ padding: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
         <div style={{ fontWeight: 600 }}>{product.name}</div>
