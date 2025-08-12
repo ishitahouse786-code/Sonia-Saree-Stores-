@@ -2,8 +2,11 @@
   "name": "workspace",
   "version": "1.0.0",
   "description": "App bulid E-commerce website development",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +21,8 @@
   },
   "homepage": "https://github.com/ishitahouse786-code/Sonia-Saree-Stores-#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "fuse.js": "^6.6.2"
   }
 }
