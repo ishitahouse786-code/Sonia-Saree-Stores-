@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 
-export default function Header() {
+export default function Header({ query = '', onSearch = () => {} }) {
   return (
     <header
       style={{
@@ -18,7 +18,7 @@ export default function Header() {
     >
       <div style={{ fontWeight: 700, fontSize: 18 }}>Saree Shop</div>
       <div style={{ flex: 1, marginLeft: 16, marginRight: 16 }}>
-        <SearchBar />
+        <SearchBar value={query} onChange={onSearch} />
       </div>
     </header>
   );
