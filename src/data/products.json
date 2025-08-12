@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "লাল কাতান শাড়ি",
+      "title_bn": "লাল কাতান শাড়ি",
+      "price": 1890,
+      "image": "https://images.unsplash.com/photo-1603575449296-8d6c5c6eda4f?q=80&w=1200&auto=format&fit=crop",
+      "description": "উজ্জ্বল লাল কাতান শাড়ি, উৎসবের জন্য উপযুক্ত।",
+      "description_bn": "উজ্জ্বল লাল কাতান শাড়ি, উৎসবের জন্য উপযুক্ত।",
+      "tags": ["কাতান", "লাল", "উৎসব"],
+      "stock": 12
+    },
+    {
+      "id": 2,
+      "name": "জর্জেট প্রিন্ট শাড়ি",
+      "title_bn": "জর্জেট প্রিন্ট শাড়ি",
+      "price": 1490,
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop",
+      "description": "দৈনন্দিন পরার জন্য আরামদায়ক জর্জেট শাড়ি।",
+      "description_bn": "দৈনন্দিন পরার জন্য আরামদায়ক জর্জেট শাড়ি।",
+      "tags": ["জর্জেট", "প্রিন্ট"],
+      "stock": 8
+    },
+    {
+      "id": 3,
+      "name": "সিল্ক बেনারসি শাড়ি",
+      "title_bn": "সিল্ক बেনারসি শাড়ি",
+      "price": 5490,
+      "image": "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop",
+      "description": "বিয়ে এবং বিশেষ অনুষ্ঠানের জন্য প্রিমিয়াম বেনারসি।",
+      "description_bn": "বিয়ে এবং বিশেষ অনুষ্ঠানের জন্য প্রিমিয়াম বেনারসি।",
+      "tags": ["সিল্ক", "বেনারসি", "বিয়ে"],
+      "stock": 5
+    }
+  ]
+}

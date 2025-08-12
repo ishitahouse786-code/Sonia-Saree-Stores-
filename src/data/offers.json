@@ -1,0 +1,31 @@
+{
+  "offers": [
+    {
+      "id": "FEST10",
+      "code": "FEST10",
+      "type": "percent",
+      "value": 10,
+      "starts_at": "2025-08-01T00:00:00.000Z",
+      "ends_at": "2025-12-31T23:59:59.999Z",
+      "active": true
+    },
+    {
+      "id": "FLAT100",
+      "code": "FLAT100",
+      "type": "flat",
+      "value": 100,
+      "starts_at": "2025-01-01T00:00:00.000Z",
+      "ends_at": "2026-01-01T00:00:00.000Z",
+      "active": true
+    },
+    {
+      "id": "EXPIRED5",
+      "code": "EXPIRED5",
+      "type": "percent",
+      "value": 5,
+      "starts_at": "2023-01-01T00:00:00.000Z",
+      "ends_at": "2024-01-01T00:00:00.000Z",
+      "active": false
+    }
+  ]
+}
