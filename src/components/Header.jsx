@@ -16,7 +16,7 @@ export default function Header({ query = '', onSearch = () => {} }) {
         zIndex: 10,
       }}
     >
-      <div style={{ fontWeight: 700, fontSize: 18 }}>Saree Shop</div>
+      <div style={{ fontWeight: 700, fontSize: 18 }}>Sonia Saree Stores</div>
       <div style={{ flex: 1, marginLeft: 16, marginRight: 16 }}>
         <SearchBar value={query} onChange={onSearch} />
       </div>
