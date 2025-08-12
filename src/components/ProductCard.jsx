@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { t } from '../i18n/strings';
 
-export default function ProductCard({ product, onAddToCart = () => {}, onOrderNow = () => {} }) {
+export default function ProductCard({ product, loading = false, onAddToCart = () => {}, onOrderNow = () => {} }) {
   if (!product) return null;
+
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const showSkeleton = loading || !hasLoaded;
 
   const isSlugImage = product.image && !/^https?:\/\//i.test(product.image);
   const responsiveSrc = isSlugImage ? `/images/${product.image}-800.webp` : product.image;
@@ -15,16 +18,22 @@ export default function ProductCard({ product, onAddToCart = () => {}, onOrderNo
   return (
     <div style={{ border: '1px solid #eee', borderRadius: 12, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       {product.image && (
-        <img
-          src={responsiveSrc}
-          srcSet={responsiveSrcSet}
-          sizes={responsiveSizes}
-          alt={altText}
-          className="w-full h-64 object-cover rounded-md"
-          loading="lazy"
-          decoding="async"
-          style={{ width: '100%', height: 220, objectFit: 'cover' }}
-        />
+        showSkeleton ? (
+          <div className="animate-pulse w-full h-64 bg-gray-200 rounded-md" style={{ width: '100%', height: 220, background: '#e5e7eb' }} />
+        ) : (
+          <img
+            src={responsiveSrc}
+            srcSet={responsiveSrcSet}
+            sizes={responsiveSizes}
+            alt={altText}
+            className="w-full h-64 object-cover rounded-md"
+            loading="lazy"
+            decoding="async"
+            onLoad={() => setHasLoaded(true)}
+            onError={() => setHasLoaded(true)}
+            style={{ width: '100%', height: 220, objectFit: 'cover' }}
+          />
+        )
       )}
       <div style={{ padding: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
         <div style={{ fontWeight: 600 }}>{product.name}</div>
