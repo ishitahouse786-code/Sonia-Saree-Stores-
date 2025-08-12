@@ -4,10 +4,27 @@ import { t } from '../i18n/strings';
 export default function ProductCard({ product, onAddToCart = () => {}, onOrderNow = () => {} }) {
   if (!product) return null;
 
+  const isSlugImage = product.image && !/^https?:\/\//i.test(product.image);
+  const responsiveSrc = isSlugImage ? `/images/${product.image}-800.webp` : product.image;
+  const responsiveSrcSet = isSlugImage
+    ? `/images/${product.image}-400.webp 400w, /images/${product.image}-800.webp 800w`
+    : undefined;
+  const responsiveSizes = isSlugImage ? '(max-width: 640px) 100vw, 33vw' : undefined;
+  const altText = product.title_bn || product.name || 'Product image';
+
   return (
     <div style={{ border: '1px solid #eee', borderRadius: 12, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       {product.image && (
-        <img src={product.image} alt={product.name} loading="lazy" style={{ width: '100%', height: 220, objectFit: 'cover' }} />
+        <img
+          src={responsiveSrc}
+          srcSet={responsiveSrcSet}
+          sizes={responsiveSizes}
+          alt={altText}
+          className="w-full h-64 object-cover rounded-md"
+          loading="lazy"
+          decoding="async"
+          style={{ width: '100%', height: 220, objectFit: 'cover' }}
+        />
       )}
       <div style={{ padding: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
         <div style={{ fontWeight: 600 }}>{product.name}</div>
