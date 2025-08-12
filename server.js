@@ -55,7 +55,7 @@ app.post('/api/ai-search', async (req, res) => {
     const idSet = new Set(top.map((t) => t.id));
     const suggestions = products.filter((p) => idSet.has(p.id));
     const message = generateBengaliSuggestionMessage(query, suggestions);
-    res.json({ suggestions, message });
+    res.json({ products: suggestions, suggestions, message });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Search failed' });
